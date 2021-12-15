@@ -11,18 +11,24 @@
 
 int main()
 {
-	Magasin m();
-	Produit p("PS5", "Console de jeu de marque Sony", 15, 499.99);
-	Produit p1("DELL XPS", "Ordinateur portable", 8, 1200.50);
+	Magasin m;
+	Produit PS5("PS5", "Console de jeu de marque Sony", 15, 499.99);
+	Produit XPS("DELL XPS", "Ordinateur portable", 8, 1200.50);
+	Produit AP("Airpods 3", "Apple Airpods 3", 220, 189.99);
+
 /*
-	std::cout << "Produit: " << p.getTitre() << std::endl;
+	std::cout << "Produit: " <<	p.getTitre() << std::endl;
 	std::cout << "Description: " << p.getDescription() << std::endl;
 	std::cout << "Il en reste " << p.getStock() << " en stock." << std::endl;
 	std::cout << "Le prix est de " << p.getPrix() << " euros" << std::endl;
 	p.updatePrix();
 */
-	std::cout << p << std::endl;
+	std::cout << PS5 << std::endl;
 
+	m.ajouterProduit(PS5);
+	m.ajouterProduit(XPS);
+	m.ajouterProduit(AP);
+	m.afficherProduits();
 
 	return 0;
 }
