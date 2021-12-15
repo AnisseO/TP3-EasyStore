@@ -13,6 +13,7 @@ int main()
 {
 	Magasin m();
 	Produit p("PS5", "Console de jeu de marque Sony", 15, 499.99);
+	Produit p1("DELL XPS", "Ordinateur portable", 8, 1200.50);
 /*
 	std::cout << "Produit: " << p.getTitre() << std::endl;
 	std::cout << "Description: " << p.getDescription() << std::endl;
@@ -20,7 +21,6 @@ int main()
 	std::cout << "Le prix est de " << p.getPrix() << " euros" << std::endl;
 	p.updatePrix();
 */
-
 	std::cout << p << std::endl;
 
 

@@ -1,4 +1,7 @@
+#ifndef PRODUIT_H
+#define PRODUIT_H
 #include <string>
+#include <vector>
 
 class Produit
 {
@@ -18,5 +21,7 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& os, const Produit& produit);
+
+#endif PRODUIT_H
 
 
