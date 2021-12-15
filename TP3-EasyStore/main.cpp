@@ -1,27 +1,45 @@
 /***********************************************************
-	OUTSSAKKI Anisse et SGUIAR Ahmed
-	14/12/2021
-	TP3 - Easy Store
+	    OUTSSAKKI Anisse et SGUIAR Ahmed
+	               14/12/2021
+	            TP3 - Easy Store
 ***********************************************************/
 #include <iostream>
 #include <string>
 #include "Magasin.h"
 #include "Produit.h"
+#include "Client.h"
 
 
 int main()
 {
-	Magasin m();
-	Produit p("PS5", "Console de jeu de marque Sony", 15, 499.99);
-	Produit p1("DELL XPS", "Ordinateur portable", 8, 1200.50);
-/*
-	std::cout << "Produit: " << p.getTitre() << std::endl;
+	Magasin m;
+	Client c("Mbappe", "Ky");
+	Produit PS5("PS5", "Console de jeu de marque Sony", 15, 499.99);
+	Produit XPS("DELL XPS", "Ordinateur portable", 8, 1200.50);
+	Produit AP("Airpods 3", "Apple Airpods 3", 220, 189.99);
+
+	/*
+	std::cout << "Produit: " <<	p.getTitre() << std::endl;
 	std::cout << "Description: " << p.getDescription() << std::endl;
 	std::cout << "Il en reste " << p.getStock() << " en stock." << std::endl;
 	std::cout << "Le prix est de " << p.getPrix() << " euros" << std::endl;
 	p.updatePrix();
-*/
-	std::cout << p << std::endl;
+	*/
+
+	std::cout << PS5 << std::endl;
+	
+	/*
+	m.ajouterProduit(PS5);
+	m.ajouterProduit(XPS);
+	m.ajouterProduit(AP);
+	m.afficherProduits();
+	m.chercherProduit(PS5);
+	m.updateQuantite(PS5);
+	*/
+
+	std::cout << c.getID() << std::endl;
+	std::cout << c.getNom() << std::endl;
+	std::cout << c.getPrenom() << std::endl;
 
 
 	return 0;
