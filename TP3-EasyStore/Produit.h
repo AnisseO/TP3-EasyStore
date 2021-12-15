@@ -17,4 +17,6 @@ private:
 	double _prix;
 };
 
+std::ostream& operator<<(std::ostream& os, const Produit& produit);
+
 

@@ -30,5 +30,15 @@ void Produit::updatePrix()
     std::cout << "Entrez un nouveau prix: " << std::endl;
     std::cin >> _prix;
     std::cout << std::endl<< "Le nouveau prix est de " << getPrix() << " euros" << std::endl;
+}
 
+std::ostream& operator<<(std::ostream& os, const Produit& produit) 
+{
+    std::string title = "Produit: " + produit.getTitre();
+    std::string Desc = "Description: " + produit.getDescription();
+    std::string Quantite = "Il en reste " + std::to_string(produit.getStock()) + " en stock";
+    std::string Price = "Le prix est de " + std::to_string(produit.getPrix()) + " euros";
+
+    os << title << std::endl << Desc << std::endl << Quantite << std::endl << Price << std::endl;
+    return os;
 }
