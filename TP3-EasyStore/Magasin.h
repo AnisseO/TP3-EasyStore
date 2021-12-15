@@ -13,6 +13,5 @@ private:
 	std::vector<Client> _clients;
 	std::vector<Commande> _commandes; */
 
-
 };
 

@@ -25,9 +25,10 @@ double Produit::getPrix() const
     return _prix;
 }
 
-void Produit::updatePrix(double prix)
+void Produit::updatePrix()
 {
     std::cout << "Entrez un nouveau prix: " << std::endl;
     std::cin >> _prix;
-    std::cout<< std::endl;
+    std::cout << std::endl<< "Le nouveau prix est de " << getPrix() << " euros" << std::endl;
+
 }

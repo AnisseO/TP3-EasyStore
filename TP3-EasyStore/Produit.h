@@ -8,7 +8,7 @@ public:
 	std::string getDescription() const;
 	int getStock() const;
 	double getPrix() const;
-	void updatePrix(double prix);
+	void updatePrix();
 
 private:
 	std::string _titre;
@@ -16,4 +16,5 @@ private:
 	int _stock;
 	double _prix;
 };
+
 
