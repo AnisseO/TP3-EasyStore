@@ -62,7 +62,7 @@ std::ostream& operator<<(std::ostream& os, const Client& client)
 	std::string prenom = "Prenom: " + client.getPrenom();
 	std::string Nom = "Nom: " + client.getNom();
 	std::string ID = "ID : " + client.getID();
-	std::string Panier = "Le panier est compose de: "; // /!\ Rajouter panier
+	std::string Panier = "Son panier est compose de: "; // /!\ Rajouter panier
 
 	os << prenom << std::endl << Nom << std::endl << ID << std::endl << Panier << std::endl;
 	return os;

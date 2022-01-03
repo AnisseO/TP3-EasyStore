@@ -9,13 +9,17 @@ class Magasin
 {
 public:
 	Magasin();
+
+	//Produit
 	void ajouterProduit(Produit nvProduit);
 	void afficherProduits();
 	void chercherProduit(Produit& a);
 	void updateQuantite(Produit& a);
 	
+	//Client
 	void ajouterClient(Client& c);
 	void afficherClient();
+	void chercherClient(Client& c);
 
 private:
 	std::vector<Produit> _produits;

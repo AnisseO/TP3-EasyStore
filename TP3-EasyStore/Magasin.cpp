@@ -58,6 +58,7 @@ void Magasin::updateQuantite(Produit& a)
 
 void Magasin::ajouterClient(Client& c)
 {
+	/*
 	std::string nomClient, prenomClient;
 	std::cout << "Entrez son nom de famille:" << std::endl;
 	std::cin >> nomClient;
@@ -66,6 +67,7 @@ void Magasin::ajouterClient(Client& c)
 	std::cin >> prenomClient;
 	
 	//c(nomClient, prenomClient);
+	*/
 
 	_clients.push_back(c);
 }
@@ -75,5 +77,20 @@ void Magasin::afficherClient()
 	for (int i = 0; i < _clients.size(); i++)
 	{
 		std::cout << _clients[i] << std::endl;
+	}
+}
+
+void Magasin::chercherClient(Client& c)
+{
+	std::string client;
+	std::cout << "Entrez le nom du client recherche: " << std::endl;
+	std::cin >> client;
+
+	if (c.getNom() == client)
+	{
+		std::cout << c << std::endl;
+	}
+	else {
+		std::cout << "Le client recherche est introuvable." << std::endl;
 	}
 }
