@@ -94,3 +94,9 @@ void Magasin::chercherClient(Client& c)
 		std::cout << "Le client recherche est introuvable." << std::endl;
 	}
 }
+
+void Magasin::ajouterPanierClient(Client& c, Produit& p)
+{
+	c.ajoutPanier(p);
+}
+

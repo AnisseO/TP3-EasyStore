@@ -48,8 +48,11 @@ int main()
 	m.ajouterClient(c1);
 
 	m.afficherClient();
-
 	m.chercherClient(c1);
+	m.ajouterPanierClient(c1, PS5);
+	c1.getPanier();
+
+
 
 	return 0;
 }

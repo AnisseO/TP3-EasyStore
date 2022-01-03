@@ -20,6 +20,7 @@ public:
 	void ajouterClient(Client& c);
 	void afficherClient();
 	void chercherClient(Client& c);
+	void ajouterPanierClient(Client& c, Produit& p);
 
 private:
 	std::vector<Produit> _produits;

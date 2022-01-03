@@ -26,7 +26,7 @@ void Client::getPanier()
 {
 	for (int i = 0; i < _Panier.size(); i++) {
 
-		//std::cout << _Panier[i] << std::endl;
+		std::cout << _Panier[i] << std::endl;
 	}
 }
 
