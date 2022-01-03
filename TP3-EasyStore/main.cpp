@@ -41,6 +41,10 @@ int main()
 	std::cout << c.getNom() << std::endl;
 	std::cout << c.getPrenom() << std::endl;
 
+	m.ajouterProduit(PS5);
+	m.ajouterProduit(XPS);
+	m.ajouterProduit(AP);
+	m.afficherProduits();
 
 	return 0;
 }
