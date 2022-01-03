@@ -1,6 +1,7 @@
 #include "Magasin.h"
 #include "Produit.h"
 #include <iostream>
+#include <string>
 
 Magasin::Magasin()
 {
@@ -52,5 +53,27 @@ void Magasin::updateQuantite(Produit& a)
 	else
 	{
 		std::cout << "Le produit n'est pas disponible." << std::endl;
+	}
+}
+
+void Magasin::ajouterClient(Client& c)
+{
+	std::string nomClient, prenomClient;
+	std::cout << "Entrez son nom de famille:" << std::endl;
+	std::cin >> nomClient;
+	std::cout<< "" << std::endl;
+	std::cout << "Entrez son prenom:" << std::endl;
+	std::cin >> prenomClient;
+	
+	//c(nomClient, prenomClient);
+
+	_clients.push_back(c);
+}
+
+void Magasin::afficherClient()
+{
+	for (int i = 0; i < _clients.size(); i++)
+	{
+		std::cout << _clients[i] << std::endl;
 	}
 }

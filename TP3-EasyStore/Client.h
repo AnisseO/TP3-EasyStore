@@ -15,6 +15,8 @@ public:
 	void getPanier() ;
 	void ajoutPanier(Produit add);
 	void viderPanier();
+	void updateQuantiteProduit();
+	void suppProduit();
 
 
 private:
@@ -24,6 +26,8 @@ private:
 	std::vector<Client> _Panier;
 
 };
+
+std::ostream& operator<<(std::ostream& os, const Client& client);
 
 #endif CLIENT_H
 

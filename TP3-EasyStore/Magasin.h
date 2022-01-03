@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "Produit.h"
+#include "Client.h"
 
 class Magasin
 {
@@ -12,13 +13,14 @@ public:
 	void afficherProduits();
 	void chercherProduit(Produit& a);
 	void updateQuantite(Produit& a);
+	
+	void ajouterClient(Client& c);
+	void afficherClient();
 
 private:
 	std::vector<Produit> _produits;
-	/*
 	std::vector<Client> _clients;
-	std::vector<Commande> _commandes;
-	*/
+	//std::vector<Commande> _commandes;
 };
 
 #endif MAGASIN_H
