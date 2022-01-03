@@ -15,8 +15,8 @@ public:
 	void getPanier() ;
 	void ajoutPanier(Produit add);
 	void viderPanier();
-	void updateQuantiteProduit();
-	void suppProduit();
+	void updateQuantiteProduit(Client c);
+	void suppProduit(Produit supp);
 
 
 private:

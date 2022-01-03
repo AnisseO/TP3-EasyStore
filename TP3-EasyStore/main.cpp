@@ -8,6 +8,7 @@
 #include "Magasin.h"
 #include "Produit.h"
 #include "Client.h"
+#include "Commande.h"
 
 
 int main()

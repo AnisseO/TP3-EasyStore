@@ -100,3 +100,35 @@ void Magasin::ajouterPanierClient(Client& c, Produit& p)
 	c.ajoutPanier(p);
 }
 
+void Magasin::suppPanierClient(Client& c, Produit& p)
+{
+	c.suppProduit(p);
+}
+
+void Magasin::updateQuantitePanier(Client c, Client& cl)
+{
+	cl.updateQuantiteProduit(c);
+}
+
+void Magasin::validerCmd(Client& c)
+{
+	// /!\  Méthode non définie
+	
+	//std::vector <Produit> panier = c.getPanier();
+}
+
+void Magasin::updateStatutCmd()
+{
+	// /!\  Méthode non définie
+}
+
+void Magasin::afficherCmds()
+{
+	// /!\  Méthode non définie
+}
+
+void Magasin::afficherCmdsClient(Client& c)
+{
+	// /!\  Méthode non définie
+}
+

@@ -32,6 +32,8 @@ void Client::getPanier()
 
 void Client::ajoutPanier(Produit add)
 {
+	// /!\  Méthode non définie
+	
 	//_Panier.push_back(add);
 }
 
@@ -49,13 +51,16 @@ void Client::viderPanier()
 	}
 }
 
-void Client::updateQuantiteProduit()
+void Client::updateQuantiteProduit(Client c)
 {
+	// /!\ Méthode non définie
 }
 
-void Client::suppProduit()
+void Client::suppProduit(Produit supp)
 {
+	// /!\ Méthode non définie
 }
+
 
 std::ostream& operator<<(std::ostream& os, const Client& client)
 {

@@ -4,6 +4,7 @@
 #include <vector>
 #include "Produit.h"
 #include "Client.h"
+#include "Commande.h"
 
 class Magasin
 {
@@ -21,11 +22,20 @@ public:
 	void afficherClient();
 	void chercherClient(Client& c);
 	void ajouterPanierClient(Client& c, Produit& p);
+	void suppPanierClient(Client& c, Produit& p);
+	void updateQuantitePanier(Client c, Client& cl);
+
+	//Commande
+	void validerCmd(Client& c);
+	void updateStatutCmd();
+	void afficherCmds();
+	void afficherCmdsClient(Client& c);
+
 
 private:
 	std::vector<Produit> _produits;
 	std::vector<Client> _clients;
-	//std::vector<Commande> _commandes;
+	std::vector<Commande> _commandes;
 };
 
 #endif MAGASIN_H
