@@ -4,7 +4,6 @@
 #include <vector>
 #include "Produit.h"
 
-
 class Client
 {
 public:
@@ -15,19 +14,18 @@ public:
 	void getPanier() ;
 	void ajoutPanier(Produit add);
 	void viderPanier();
-	void updateQuantiteProduit(Client c);
+	void updateQuantiteProduit(Produit pr, Produit& p);
 	void suppProduit(Produit supp);
-
 
 private:
 	std::string _nom;
 	std::string _prenom;
 	std::string _ID;
-	std::vector<Client> _Panier;
+	std::vector<Produit> _Panier;
 
 };
 
-std::ostream& operator<<(std::ostream& os, const Client& client);
+std::ostream& operator<<(std::ostream& os, Client& client);
 
 #endif CLIENT_H
 

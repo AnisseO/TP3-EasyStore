@@ -18,12 +18,12 @@ public:
 	void updateQuantite(Produit& a);
 	
 	//Client
-	void ajouterClient(Client& c);
+	void ajouterClient(Client c);
 	void afficherClient();
 	void chercherClient(Client& c);
 	void ajouterPanierClient(Client& c, Produit& p);
 	void suppPanierClient(Client& c, Produit& p);
-	void updateQuantitePanier(Client c, Client& cl);
+	void updateQuantitePanier(Client c, Produit p, Produit& pr, Client& cl);
 
 	//Commande
 	void validerCmd(Client& c);
@@ -35,7 +35,7 @@ public:
 private:
 	std::vector<Produit> _produits;
 	std::vector<Client> _clients;
-	std::vector<Commande> _commandes;
+	//std::vector<Commande> _commandes;
 };
 
 #endif MAGASIN_H

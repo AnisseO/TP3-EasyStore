@@ -40,6 +40,7 @@ int main()
 	m.updateQuantite(PS5);
 	*/
 
+
 	std::cout << c.getID() << std::endl;
 	std::cout << c.getNom() << std::endl;
 	std::cout << c.getPrenom() << std::endl;

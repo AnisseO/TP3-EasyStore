@@ -56,7 +56,7 @@ void Magasin::updateQuantite(Produit& a)
 	}
 }
 
-void Magasin::ajouterClient(Client& c)
+void Magasin::ajouterClient(Client c)
 {
 	/*
 	std::string nomClient, prenomClient;
@@ -105,9 +105,9 @@ void Magasin::suppPanierClient(Client& c, Produit& p)
 	c.suppProduit(p);
 }
 
-void Magasin::updateQuantitePanier(Client c, Client& cl)
+void Magasin::updateQuantitePanier(Client c,Produit p, Produit& pr, Client& cl)
 {
-	cl.updateQuantiteProduit(c);
+	cl.updateQuantiteProduit(p,pr);
 }
 
 void Magasin::validerCmd(Client& c)

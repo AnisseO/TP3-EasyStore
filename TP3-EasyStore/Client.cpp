@@ -1,4 +1,5 @@
 #include "Client.h"
+#include "Produit.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -22,7 +23,7 @@ std::string Client::getID() const
 	return _nom + "." + _prenom;
 }
 
-void Client::getPanier() 
+void Client::getPanier()
 {
 	for (int i = 0; i < _Panier.size(); i++) {
 
@@ -32,9 +33,9 @@ void Client::getPanier()
 
 void Client::ajoutPanier(Produit add)
 {
-	// /!\  Méthode non définie
 	
-	//_Panier.push_back(add);
+
+	_Panier.push_back(add);
 }
 
 void Client::viderPanier()
@@ -51,24 +52,36 @@ void Client::viderPanier()
 	}
 }
 
-void Client::updateQuantiteProduit(Client c)
+void Client::updateQuantiteProduit(Produit pr, Produit& p)
 {
-	// /!\ Méthode non définie
+	int nvQuantite = 0;
+	std::cout << "Entrez la nouvelle quantite: " << std::endl;
+	std::cin >> nvQuantite;
+	nvQuantite = p.getStock();
+	
 }
 
 void Client::suppProduit(Produit supp)
 {
 	// /!\ Méthode non définie
+	std::string titre = supp.getTitre();
+	std::string desc = supp.getDescription();
+	int stock = supp.getStock();
+	double prix = supp.getPrix();
+
+	//_Panier.erase(titre);
+
 }
 
 
-std::ostream& operator<<(std::ostream& os, const Client& client)
+std::ostream& operator<<(std::ostream& os, Client& client)
 {
 	std::string prenom = "Prenom: " + client.getPrenom();
 	std::string Nom = "Nom: " + client.getNom();
 	std::string ID = "ID : " + client.getID();
-	std::string Panier = "Son panier est compose de: "; // /!\ Rajouter panier
+	std::string Panier = "Son panier est compose de: " ;
 
 	os << prenom << std::endl << Nom << std::endl << ID << std::endl << Panier << std::endl;
 	return os;
+	client.getPanier();
 }
