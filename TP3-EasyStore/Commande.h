@@ -5,7 +5,6 @@
 #include "Produit.h"
 #include "Magasin.h"
 
-
 class Commande
 {
 public:

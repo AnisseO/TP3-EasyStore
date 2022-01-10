@@ -2,6 +2,7 @@
 #include "Produit.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
 Magasin::Magasin()
 {
@@ -105,21 +106,25 @@ void Magasin::suppPanierClient(Client& c, Produit& p)
 	c.suppProduit(p);
 }
 
-void Magasin::updateQuantitePanier(Client c,Produit p, Produit& pr, Client& cl)
+void Magasin::updateQuantitePanier(Client c,Produit p, Client& cl)
 {
-	cl.updateQuantiteProduit(p,pr);
+	cl.updateQuantiteProduit(p);
 }
 
 void Magasin::validerCmd(Client& c)
 {
 	// /!\  Méthode non définie
-	
-	//std::vector <Produit> panier = c.getPanier();
 }
 
 void Magasin::updateStatutCmd()
 {
-	// /!\  Méthode non définie
+	/* / !\  Méthode non définie
+
+	if (validerCmd) {
+		bool statut = true;
+	}
+	else{}
+	*/
 }
 
 void Magasin::afficherCmds()

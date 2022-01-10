@@ -6,6 +6,7 @@
 class Produit
 {
 public:
+	Produit();
 	Produit(std::string titre, std::string description, int stock, double prix);
 	std::string getTitre() const;
 	std::string getDescription() const;
@@ -13,10 +14,12 @@ public:
 	double getPrix() const;
 	void updatePrix(double& prix);
 
-private:
-	std::string _titre;
-	std::string _description;
+protected:
 	int _stock;
+	std::string _titre;
+
+private:
+	std::string _description;
 	double _prix;
 };
 

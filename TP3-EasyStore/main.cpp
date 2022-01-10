@@ -14,12 +14,14 @@
 int main()
 {
 	Magasin m;
+
 	Client c("Mbappe", "Ky");
 	Client c0("Outssakki", "Anisse");
 	Client c1("Benzema", "Karim");
+
 	Produit PS5("PS5", "Console de jeu de marque Sony", 15, 499.99);
 	Produit XPS("DELL XPS", "Ordinateur portable", 8, 1200.50);
-	Produit AP("Airpods 3", "Apple Airpods 3", 220, 189.99);
+	Produit AP3("Airpods 3", "Apple Airpods 3", 220, 189.99);
 
 	/*
 	std::cout << "Produit: " <<	p.getTitre() << std::endl;

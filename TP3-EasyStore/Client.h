@@ -4,17 +4,18 @@
 #include <vector>
 #include "Produit.h"
 
-class Client
+class Client: public Produit
 {
 public:
 	Client(std::string nom, std::string prenom);
+	Produit monProduit;
 	std::string getNom() const;
 	std::string getPrenom() const;
 	std::string getID() const;
 	void getPanier() ;
 	void ajoutPanier(Produit add);
 	void viderPanier();
-	void updateQuantiteProduit(Produit pr, Produit& p);
+	void updateQuantiteProduit(Produit pr);
 	void suppProduit(Produit supp);
 
 private:

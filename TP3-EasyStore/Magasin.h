@@ -23,14 +23,13 @@ public:
 	void chercherClient(Client& c);
 	void ajouterPanierClient(Client& c, Produit& p);
 	void suppPanierClient(Client& c, Produit& p);
-	void updateQuantitePanier(Client c, Produit p, Produit& pr, Client& cl);
+	void updateQuantitePanier(Client c, Produit p, Client& cl);
 
 	//Commande
 	void validerCmd(Client& c);
 	void updateStatutCmd();
 	void afficherCmds();
 	void afficherCmdsClient(Client& c);
-
 
 private:
 	std::vector<Produit> _produits;

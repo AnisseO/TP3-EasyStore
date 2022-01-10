@@ -1,6 +1,14 @@
 #include "Produit.h"
 #include <iostream>
 
+Produit::Produit()
+{
+    this->_titre = "";
+    this->_description = "";
+    this->_stock = 0;
+    this->_prix = 0.0;
+}
+
 Produit::Produit(std::string titre, std::string description, int stock, double prix): _titre(titre), _description(description), _stock(stock), _prix(prix)
 {
 }

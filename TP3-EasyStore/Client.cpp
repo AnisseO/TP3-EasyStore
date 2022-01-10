@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 
+
 Client::Client(std::string nom, std::string prenom): _nom(nom), _prenom(prenom)
 {
 }
@@ -50,13 +51,12 @@ void Client::viderPanier()
 	}
 }
 
-void Client::updateQuantiteProduit(Produit pr, Produit& p)
+void Client::updateQuantiteProduit(Produit p)
 {
 	int nvQuantite = 0;
 	std::cout << "Entrez la nouvelle quantite: " << std::endl;
 	std::cin >> nvQuantite;
-	nvQuantite = p.getStock();
-	
+	nvQuantite = _stock;
 }
 
 void Client::suppProduit(Produit supp)
@@ -66,9 +66,9 @@ void Client::suppProduit(Produit supp)
 	std::string desc = supp.getDescription();
 	int stock = supp.getStock();
 	double prix = supp.getPrix();
-
-	//_Panier.erase(titre);
-
+		
+	//std::find(_Panier.begin(), _Panier.end(), titre) ;
+	
 }
 
 
