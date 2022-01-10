@@ -10,7 +10,7 @@ class Commande
 {
 public:
 	Commande(std::string client, std::vector<Produit> produits, bool statut);
-	friend std::ostream& operator<<(std::ostream& os, Commande& cmd);
+	friend std::ostream& operator<<(std::ostream& os, const Commande& cmd);
 
 private:
 	std::string _client;

@@ -33,8 +33,6 @@ void Client::getPanier()
 
 void Client::ajoutPanier(Produit add)
 {
-	
-
 	_Panier.push_back(add);
 }
 
