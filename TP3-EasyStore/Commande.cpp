@@ -15,6 +15,8 @@ Commande::Commande()
 
 Commande::Commande(unsigned int numCommande, std::string client, std::vector<Produit> produits, bool statut): _numCmd(numCommande), _client(client), _produits(produits), _statut(statut)
 {
+    _numCmd = ++_memoire;
+    _memoire = _numCmd;
 }
 
 Commande::~Commande()

@@ -57,7 +57,7 @@ void Client::viderPanier()
 
 	if (_Panier.empty() == true)
 	{
-		std::cout << "Le panier a bien été vid\202." << std::endl;
+		std::cout << "Le panier a bien \202t\202 vid\202." << std::endl;
 	}
 	else
 	{

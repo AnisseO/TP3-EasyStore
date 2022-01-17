@@ -13,15 +13,16 @@ public:
 	int getStock() const;
 	double getPrix() const;
 	void updatePrix(double& prix);
+	void updateQuantite(int& stock);
 	~Produit();
 
 protected:
 	int _stock;
 	std::string _titre;
+	double _prix;
 
 private:
 	std::string _description;
-	double _prix;
 };
 
 std::ostream& operator<<(std::ostream& os, const Produit& produit);

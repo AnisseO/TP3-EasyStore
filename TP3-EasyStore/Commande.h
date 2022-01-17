@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include "Produit.h"
-#include "Magasin.h"
 
 class Commande
 {
@@ -15,6 +14,7 @@ public:
 
 private:
 	unsigned int _numCmd;
+	unsigned int _memoire;
 	std::string _client;
 	std::vector<Produit> _produits;
 	bool _statut;
