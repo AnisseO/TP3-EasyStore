@@ -8,10 +8,13 @@
 class Commande
 {
 public:
-	Commande(std::string client, std::vector<Produit> produits, bool statut);
+	Commande();
+	Commande(unsigned int numCmd, std::string client, std::vector<Produit> produits, bool statut);
 	friend std::ostream& operator<<(std::ostream& os, const Commande& cmd);
+	~Commande();
 
 private:
+	unsigned int _numCmd;
 	std::string _client;
 	std::vector<Produit> _produits;
 	bool _statut;

@@ -24,31 +24,31 @@ void Magasin::afficherProduits()
 void Magasin::chercherProduit(Produit& a)
 {
 	std::string produit;
-	std::cout << "Entrez le produit cherche: " << std::endl;
+	std::cout << "Entrez le produit cherch\202: " << std::endl;
 	std::cin >> produit;
 
-		if (a.getTitre() == produit) {
+	if (a.getTitre() == produit) {
 
-			std::cout << a << std::endl;
-		}
-		else
-		{
-			std::cout << "Le produit n'est pas disponible." << std::endl;
-		}
+		std::cout << a << std::endl;
+	}
+	else
+	{
+		std::cout << "Le produit n'est pas disponible." << std::endl;
+	}
 }
 
 void Magasin::updateQuantite(Produit& a)
 {
 	int nvStock = 0;
 	std::string produit;
-	std::cout << "Entrez le produit cherche: " << std::endl;
+	std::cout << "Entrez le produit cherch\202: " << std::endl;
 	std::cin >> produit;
 
 	if (a.getTitre() == produit) {
 
-		std::cout << "Entrez la nouvelle quantite: " << std::endl;
+		std::cout << "Entrez la nouvelle quantit\202: " << std::endl;
 		std::cin >> nvStock;
-		nvStock = a.getStock();		
+		nvStock = a.getStock();
 
 	}
 	else
@@ -63,10 +63,10 @@ void Magasin::ajouterClient(Client c)
 	std::string nomClient, prenomClient;
 	std::cout << "Entrez son nom de famille:" << std::endl;
 	std::cin >> nomClient;
-	std::cout<< "" << std::endl;
+	std::endl;
 	std::cout << "Entrez son prenom:" << std::endl;
 	std::cin >> prenomClient;
-	
+
 	//c(nomClient, prenomClient);
 	*/
 
@@ -81,10 +81,10 @@ void Magasin::afficherClient()
 	}
 }
 
-void Magasin::chercherClient(Client& c)
+void Magasin::chercherClient(Client c)
 {
 	std::string client;
-	std::cout << "Entrez le nom du client recherche: " << std::endl;
+	std::cout << "Entrez le nom du client recherch\202: " << std::endl;
 	std::cin >> client;
 
 	if (c.getNom() == client)
@@ -96,44 +96,64 @@ void Magasin::chercherClient(Client& c)
 	}
 }
 
-void Magasin::ajouterPanierClient(Client& c, Produit& p)
+void Magasin::ajouterPanierClient(Client c, Produit p)
 {
-	c.ajoutPanier(p);
+	monClient.ajoutPanier(p);
 }
 
-void Magasin::suppPanierClient(Client& c, Produit& p)
+void Magasin::suppPanierClient(Client c, Produit p)
 {
-	c.suppProduit(p);
+	monClient.suppProduit(p);
 }
 
-void Magasin::updateQuantitePanier(Client c,Produit p, Client& cl)
+void Magasin::updateQuantitePanier(Client c, Produit p)
 {
-	cl.updateQuantiteProduit(p);
+	monClient.updateQuantiteProduit(p);
 }
 
-void Magasin::validerCmd(Client& c)
+void Magasin::validerCmd(Client c)
 {
 	// /!\  Méthode non définie
+	std::string panier = c.getPanier();
+
+	if (panier == "Le panier est vide.") {
+		std::cout << "La commande ne peut \x88tre valider car le panier est vide. Veuillez le remplir." << std::endl;
+	}
+	else {
+		//_commandes.push_back();
+		//updateStatutCmd(bool statut = true);
+		
+		std::cout << "La commande a bien \202t\202 valider. Merci pour vos achats." << std::endl;
+	}
+
+	c.viderPanier();
 }
 
-void Magasin::updateStatutCmd()
+void Magasin::updateStatutCmd(unsigned int numero)
 {
-	/* / !\  Méthode non définie
+	// /!\  Méthode non définie
 
-	if (validerCmd) {
-		bool statut = true;
-	}
-	else{}
-	*/
 }
 
 void Magasin::afficherCmds()
 {
-	// /!\  Méthode non définie
+	/*
+	for (int i = 0; i < _commandes.size(); i++)
+	{
+		std::cout << _commandes[i] << std::endl;
+	}
+	*/
 }
 
-void Magasin::afficherCmdsClient(Client& c)
+void Magasin::afficherCmdsClient(Client c)
 {
-	// /!\  Méthode non définie
+	std::string client = c.getID();
+
+	/*
+	for (int i = 0; i < _commandes.size(); i++)
+	{
+		std::cout << _commandes[i] << std::endl;
+	}
+	*/
 }
 

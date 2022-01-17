@@ -6,7 +6,7 @@
 #include "Client.h"
 #include "Commande.h"
 
-class Magasin
+class Magasin 
 {
 public:
 	Magasin();
@@ -20,18 +20,20 @@ public:
 	//Client
 	void ajouterClient(Client c);
 	void afficherClient();
-	void chercherClient(Client& c);
-	void ajouterPanierClient(Client& c, Produit& p);
-	void suppPanierClient(Client& c, Produit& p);
-	void updateQuantitePanier(Client c, Produit p, Client& cl);
+	void chercherClient(Client c);
+	void ajouterPanierClient(Client c, Produit p);
+	void suppPanierClient(Client c, Produit p);
+	void updateQuantitePanier(Client c, Produit p);
 
 	//Commande
-	void validerCmd(Client& c);
-	void updateStatutCmd();
+	void validerCmd(Client c);
+	void updateStatutCmd(unsigned int numero);
 	void afficherCmds();
-	void afficherCmdsClient(Client& c);
+	void afficherCmdsClient(Client c);
 
 private:
+	Client monClient;
+	
 	std::vector<Produit> _produits;
 	std::vector<Client> _clients;
 	//std::vector<Commande> _commandes;

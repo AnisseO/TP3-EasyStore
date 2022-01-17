@@ -40,6 +40,10 @@ void Produit::updatePrix(double& prix)
     std::cout << std::endl<< "Le nouveau prix est de " << getPrix() << " euros" << std::endl;
 }
 
+Produit::~Produit()
+{
+}
+
 std::ostream& operator<<(std::ostream& os, const Produit& produit) 
 {
     std::string title = "Produit: " + produit.getTitre();

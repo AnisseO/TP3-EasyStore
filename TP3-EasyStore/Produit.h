@@ -13,6 +13,7 @@ public:
 	int getStock() const;
 	double getPrix() const;
 	void updatePrix(double& prix);
+	~Produit();
 
 protected:
 	int _stock;

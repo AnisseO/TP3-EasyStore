@@ -5,6 +5,13 @@
 #include <vector>
 
 
+Client::Client()
+{
+	this->_nom = "";
+	this->_prenom = "";
+	this->_ID = "";
+}
+
 Client::Client(std::string nom, std::string prenom): _nom(nom), _prenom(prenom)
 {
 }
@@ -24,11 +31,18 @@ std::string Client::getID() const
 	return _nom + "." + _prenom;
 }
 
-void Client::getPanier()
+std::string Client::getPanier()
 {
-	for (int i = 0; i < _Panier.size(); i++) {
+	if (_Panier.empty()) {
+		return("Le panier est vide.");
+	}
+	else
+	{
+		for (int i = 0; i < _Panier.size(); i++) {
 
-		std::cout << _Panier[i] << std::endl;
+			std::cout << _Panier[i] << std::endl;
+			return("Fin du panier.");
+		}
 	}
 }
 
@@ -43,18 +57,18 @@ void Client::viderPanier()
 
 	if (_Panier.empty() == true)
 	{
-		std::cout << "Le panier a bien été vidé." << std::endl;
+		std::cout << "Le panier a bien été vid\202." << std::endl;
 	}
 	else
 	{
-		std::cout << "Le panier n'a pas été correctement vidé. Veuillez reiterer l'action." << std::endl;
+		std::cout << "Le panier n'a pas \202t\202 correctement vid\202. Veuillez r\202iterer l'action." << std::endl;
 	}
 }
 
 void Client::updateQuantiteProduit(Produit p)
 {
 	int nvQuantite = 0;
-	std::cout << "Entrez la nouvelle quantite: " << std::endl;
+	std::cout << "Entrez la nouvelle quantit\202: " << std::endl;
 	std::cin >> nvQuantite;
 	nvQuantite = _stock;
 }
@@ -71,13 +85,17 @@ void Client::suppProduit(Produit supp)
 	
 }
 
+Client::~Client()
+{
+}
+
 
 std::ostream& operator<<(std::ostream& os, Client& client)
 {
 	std::string prenom = "Prenom: " + client.getPrenom();
 	std::string Nom = "Nom: " + client.getNom();
 	std::string ID = "ID : " + client.getID();
-	std::string Panier = "Son panier est compose de: " ;
+	std::string Panier = "Son panier est compos\202 de: " ;
 
 	os << prenom << std::endl << Nom << std::endl << ID << std::endl << Panier << std::endl;
 	return os;

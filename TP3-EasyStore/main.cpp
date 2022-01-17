@@ -5,6 +5,7 @@
 ***********************************************************/
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Magasin.h"
 #include "Produit.h"
 #include "Client.h"

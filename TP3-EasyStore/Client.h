@@ -7,23 +7,23 @@
 class Client: public Produit
 {
 public:
+	Client();
 	Client(std::string nom, std::string prenom);
-	Produit monProduit;
 	std::string getNom() const;
 	std::string getPrenom() const;
 	std::string getID() const;
-	void getPanier() ;
+	std::string getPanier() ;
 	void ajoutPanier(Produit add);
 	void viderPanier();
 	void updateQuantiteProduit(Produit pr);
 	void suppProduit(Produit supp);
+	~Client();
 
 private:
 	std::string _nom;
 	std::string _prenom;
 	std::string _ID;
 	std::vector<Produit> _Panier;
-
 };
 
 std::ostream& operator<<(std::ostream& os, Client& client);
